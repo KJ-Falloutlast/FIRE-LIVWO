@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b10">
+  <meta name="description" content="FIRE-LIVWO is an IROS 2026 multimodal odometry system that remains robust to smoke-induced visual failure and geometric degradation in underground coal-mine tunnels.">
+  <meta name="author" content="Kun Hu, Menggang Li, Kaidi Wu, Zhiwen Jin, Yingjie Zhao, Chaoquan Tang, Eryi Hu, Gongbo Zhou">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="FIRE-LIVWO | IROS 2026">
+  <meta property="og:description" content="Failure-immune mmWave radar-enhanced LiDAR-inertial-visual-wheel odometry for extreme underground environments.">
+  <meta property="og:url" content="https://kj-falloutlast.github.io/FIRE-LIVWO/">
+  <meta property="og:image" content="https://kj-falloutlast.github.io/FIRE-LIVWO/figs/Fig3-System-overview.JPG">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FIRE-LIVWO | IROS 2026">
+  <meta name="twitter:description" content="Radar · LiDAR · Vision · IMU · Wheel — adaptive state estimation under visual and geometric degradation.">
+  <meta name="twitter:image" content="https://kj-falloutlast.github.io/FIRE-LIVWO/figs/Fig3-System-overview.JPG">
+  <link rel="canonical" href="https://kj-falloutlast.github.io/FIRE-LIVWO/">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>FIRE-LIVWO | IROS 2026</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page-progress" aria-hidden="true"><span></span></div>
+
+  <header class="site-header" id="top">
+    <nav class="nav-shell" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="FIRE-LIVWO home">
+        <img src="assets/icons/favicon.svg" alt="" width="36" height="36">
+        <span>FIRE·LIVWO</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="#overview">Overview</a>
+        <a href="#method">Method</a>
+        <a href="#results">Results</a>
+        <a href="#video">Video</a>
+        <a href="#citation">Citation</a>
+        <a class="nav-code" href="https://github.com/KJ-Falloutlast/FIRE-LIVWO" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="radar-field" aria-hidden="true">
+        <span class="radar-ring ring-one"></span>
+        <span class="radar-ring ring-two"></span>
+        <span class="radar-ring ring-three"></span>
+        <span class="radar-sweep"></span>
+        <i class="echo echo-one"></i><i class="echo echo-two"></i><i class="echo echo-three"></i><i class="echo echo-four"></i>
+      </div>
+      <div class="smoke smoke-one" aria-hidden="true"></div>
+      <div class="smoke smoke-two" aria-hidden="true"></div>
+
+      <div class="shell hero-content">
+        <div class="venue-pill reveal"><span></span>IROS 2026 · Pittsburgh</div>
+        <p class="hero-kicker reveal">RADAR · LiDAR · VISION · IMU · WHEEL</p>
+        <h1 id="hero-title" class="reveal">FIRE-<em>LIVWO</em></h1>
+        <p class="hero-subtitle reveal">Robust LiDAR-Inertial-Visual-Wheel Odometry via Failure-Immune mmWave Radar Enhancement</p>
+
+        <div class="authors reveal" aria-label="Authors">
+          <a href="https://github.com/KJ-Falloutlast" target="_blank" rel="noopener">Kun Hu<sup>1</sup></a>
+          <a href="https://orcid.org/0000-0002-2395-9543" target="_blank" rel="noopener">Menggang Li<sup>1,†</sup></a>
+          <a href="https://orcid.org/0009-0005-3938-7454" target="_blank" rel="noopener">Kaidi Wu<sup>1</sup></a>
+          <a href="https://orcid.org/0009-0008-6412-4711" target="_blank" rel="noopener">Zhiwen Jin<sup>1</sup></a>
+          <span>Yingjie Zhao<sup>1</sup></span>
+          <a href="https://orcid.org/0000-0003-1641-9845" target="_blank" rel="noopener">Chaoquan Tang<sup>1</sup></a>
+          <a href="https://orcid.org/0000-0002-3932-4542" target="_blank" rel="noopener">Eryi Hu<sup>2</sup></a>
+          <a href="https://orcid.org/0000-0002-8672-2535" target="_blank" rel="noopener">Gongbo Zhou<sup>1</sup></a>
+        </div>
+        <p class="affiliations reveal"><sup>1</sup> China University of Mining and Technology &nbsp;·&nbsp; <sup>2</sup> Information Institute, Ministry of Emergency Management &nbsp;·&nbsp; <sup>†</sup> Corresponding author</p>
+
+        <div class="hero-actions reveal">
+          <a class="button button-primary" href="FIRE_LIVWO_Robust_LiDAR_Inertial_Visual_Wheel_Odometry_via_Failure_Immune_mmWave_Radar_Enhancement.pdf" target="_blank" rel="noopener"><span class="button-icon" aria-hidden="true">▱</span> Paper</a>
+          <a class="button button-secondary" href="#video">Video <span aria-hidden="true">▶</span></a>
+          <a class="button button-secondary" href="https://github.com/KJ-Falloutlast/FIRE-LIVWO" target="_blank" rel="noopener">Materials <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <div class="hero-visual reveal">
+          <button class="figure-button" type="button" data-lightbox="figs/Fig5-建图效果.jpg" aria-label="Open the full-resolution mapping and trajectory comparison">
+            <img src="figs/Fig5-建图效果.jpg" alt="Mapping and trajectory comparison in three underground coal-mine tunnels" width="1641" height="812">
+          </button>
+          <div class="visual-caption">
+            <span><i></i> Real-world underground deployment</span>
+            <span>Inspect full result <b>↗</b></span>
+          </div>
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#overview" aria-label="Scroll to overview"><span>Explore</span><i></i></a>
+    </section>
+
+    <div class="sensor-marquee" aria-hidden="true">
+      <div>
+        <span>Smoke-aware</span><b>·</b><span>Geometry-aware</span><b>·</b><span>Failure-immune</span><b>·</b><span>Adaptive fusion</span><b>·</b>
+        <span>Smoke-aware</span><b>·</b><span>Geometry-aware</span><b>·</b><span>Failure-immune</span><b>·</b><span>Adaptive fusion</span><b>·</b>
+      </div>
+    </div>
+
+    <section class="section overview" id="overview">
+      <div class="shell">
+        <div class="section-heading split-heading reveal">
+          <div>
+            <p class="eyebrow">01 · Motivation</p>
+            <h2>When visibility fades,<br><em>geometry may fail next.</em></h2>
+          </div>
+          <p>Underground coal mines combine abrupt visual failure from smoke and dust with weak geometric observability in long, self-similar corridors. FIRE-LIVWO treats them as different failure modes and responds with the sensor that remains informative.</p>
+        </div>
+
+        <div class="challenge-grid">
+          <article class="challenge-card reveal">
+            <span class="card-index">01</span>
+            <div class="card-glyph smoke-glyph" aria-hidden="true"><i></i><i></i><i></i></div>
+            <h3>Visual failure</h3>
+            <p>Dense smoke reduces transmittance and contrast, invalidating sparse photometric residuals.</p>
+          </article>
+          <article class="challenge-card reveal">
+            <span class="card-index">02</span>
+            <div class="card-glyph tunnel-glyph" aria-hidden="true"><i></i><i></i><i></i></div>
+            <h3>Geometric failure</h3>
+            <p>Long, smooth, repetitive tunnels leave LiDAR registration underconstrained along critical directions.</p>
+          </article>
+          <article class="challenge-card reveal">
+            <span class="card-index">03</span>
+            <div class="card-glyph switch-glyph" aria-hidden="true"><i></i><i></i></div>
+            <h3>Coupled failure</h3>
+            <p>Fixed fusion weights cannot safely handle observations whose reliability changes across modalities and time.</p>
+          </article>
+        </div>
+
+        <div class="abstract-card reveal">
+          <p class="eyebrow">Abstract</p>
+          <p>FIRE-LIVWO is a tightly coupled multimodal odometry framework based on an iterated error-state Kalman filter. It unifies 4D mmWave radar, LiDAR, and visual features in a shared VoxelMap; adds radar Doppler velocity for smoke-filled scenes; and tightly couples wheel odometry with nonholonomic constraints and online lever-arm compensation for geometrically degenerate corridors. Online visual and geometric observability analysis dynamically adjusts measurement weights and fusion modes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section method" id="method">
+      <div class="shell">
+        <div class="section-heading split-heading reveal">
+          <div>
+            <p class="eyebrow">02 · Method</p>
+            <h2>One estimator.<br><em>Five sensing streams.</em></h2>
+          </div>
+          <p>All measurements meet inside one IESKF pipeline. A shared VoxelMap supports heterogeneous geometry and sparse direct vision, while the detection layer activates radar and wheel constraints only when their complementary information is needed.</p>
+        </div>
+
+        <figure class="paper-figure reveal">
+          <button class="figure-button" type="button" data-lightbox="figs/Fig3-System-overview.JPG" aria-label="Open the FIRE-LIVWO system overview">
+            <img src="figs/Fig3-System-overview.JPG" alt="FIRE-LIVWO system overview with radar, LiDAR, IMU, camera, wheel, adaptive switching, and VoxelMap modules" loading="lazy" width="1280" height="720">
+          </button>
+          <figcaption><span>System overview</span><p>Radar–LiDAR geometric residuals, photometric residuals, Doppler velocity, and wheel constraints update a unified state estimate.</p></figcaption>
+        </figure>
+
+        <div class="contribution-grid">
+          <article class="contribution reveal"><span>Unified</span><h3>Heterogeneous VoxelMap</h3><p>Radar and LiDAR features share point-to-plane geometry with sparse visual map points in one map representation.</p></article>
+          <article class="contribution reveal"><span>Penetrating</span><h3>Radar Doppler velocity</h3><p>Pointwise Doppler constraints retain motion observability when dense smoke compromises camera and LiDAR measurements.</p></article>
+          <article class="contribution reveal"><span>Kinematic</span><h3>Wheel odometry + NHC</h3><p>Nonholonomic motion and online lever-arm compensation suppress drift along geometrically weak tunnel axes.</p></article>
+          <article class="contribution reveal"><span>Adaptive</span><h3>Dual observability tests</h3><p>Visual transmittance and geometric Hessian spectra drive continuous, interpretable modality switching.</p></article>
+        </div>
+
+        <figure class="paper-figure strategy-figure reveal">
+          <button class="figure-button" type="button" data-lightbox="figs/Fig4-退化检测与融合切换.JPG" aria-label="Open the degradation detection and switching strategy">
+            <img src="figs/Fig4-退化检测与融合切换.JPG" alt="Degradation detection and adaptive fusion-mode switching strategy" loading="lazy" width="1280" height="720">
+          </button>
+          <figcaption><span>Adaptive fusion strategy</span><p>Nominal LIV switches to radar-assisted LIVR in smoke, wheel-assisted LIVW in weak geometry, or LIVRW when both failures coexist.</p></figcaption>
+        </figure>
+
+        <div class="mode-track reveal" aria-label="Adaptive fusion modes">
+          <article><small>Nominal</small><strong>LIV</strong><p>LiDAR + IMU + Vision</p></article><i aria-hidden="true"></i>
+          <article><small>Smoke</small><strong>LIVR</strong><p>Add radar Doppler</p></article><i aria-hidden="true"></i>
+          <article><small>Weak geometry</small><strong>LIVW</strong><p>Add wheel + NHC</p></article><i aria-hidden="true"></i>
+          <article class="mode-highlight"><small>Dual failure</small><strong>LIVRW</strong><p>Radar + wheel</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section results" id="results">
+      <div class="shell">
+        <div class="section-heading split-heading reveal">
+          <div><p class="eyebrow">03 · Results</p><h2>One route.<br><em>Two failure boundaries.</em></h2></div>
+          <p>A Husky A200 traverses three real underground tunnels containing dense smoke, feature-sparse sections, and strongly repetitive geometry. Twenty points measured by a total station provide trajectory reference.</p>
+        </div>
+
+        <div class="result-stats">
+          <article class="stat reveal"><strong>5.677<small> m</small></strong><span>Average localization error</span></article>
+          <article class="stat reveal"><strong>20</strong><span>Total-station control points</span></article>
+          <article class="stat reveal"><strong>5</strong><span>Sensing modalities</span></article>
+          <article class="stat reveal"><strong>4</strong><span>Adaptive fusion modes</span></article>
+        </div>
+
+        <figure class="paper-figure result-main reveal">
+          <button class="figure-button" type="button" data-lightbox="figs/Fig5-建图效果.jpg" aria-label="Open the mapping and trajectory results">
+            <img src="figs/Fig5-建图效果.jpg" alt="Mapping, trajectory, and average localization error comparison" loading="lazy" width="1641" height="812">
+          </button>
+          <figcaption><span>Mapping and trajectory results</span><p>FIRE-Full reaches the tunnel endpoint with the lowest average localization error; the evaluated ablations and baselines drift or fail under visual or geometric degradation.</p></figcaption>
+        </figure>
+
+        <div class="detector-grid">
+          <figure class="detector-card reveal">
+            <button class="figure-button" type="button" data-lightbox="figs/Fig6-几何退化检测.JPG" aria-label="Open the geometric degradation analysis"><img src="figs/Fig6-几何退化检测.JPG" alt="Geometric observability score and degradation interval" loading="lazy" width="1280" height="720"></button>
+            <figcaption><b>Geometric degradation</b><span>The Hessian spectrum identifies the underconstrained interval and its weakest direction.</span></figcaption>
+          </figure>
+          <figure class="detector-card reveal">
+            <button class="figure-button" type="button" data-lightbox="figs/Fig7-视觉退化检测.JPG" aria-label="Open the visual degradation analysis"><img src="figs/Fig7-视觉退化检测.JPG" alt="Visual observability score and smoke interval" loading="lazy" width="1280" height="720"></button>
+            <figcaption><b>Visual degradation</b><span>The visual score falls at smoke entry, reaches its minimum in dense smoke, and recovers after exit.</span></figcaption>
+          </figure>
+        </div>
+
+        <div class="benchmark reveal" role="region" aria-label="Average localization error comparison" tabindex="0">
+          <div class="benchmark-copy"><p class="eyebrow">Average localization error ↓</p><h3>Full multimodal fusion wins the complete sequence.</h3><p>Methods marked as failure cannot output the full trajectory.</p></div>
+          <div class="benchmark-table">
+            <div class="bar-row best"><span>FIRE-Full</span><i style="--score:12.5%"></i><b>5.677 m</b></div>
+            <div class="bar-row"><span>FIRE-LIVR</span><i style="--score:33.9%"></i><b>15.420 m</b></div>
+            <div class="bar-row"><span>GaRLIO</span><i style="--score:37.9%"></i><b>17.212 m</b></div>
+            <div class="bar-row"><span>FIRE-Base</span><i style="--score:52.7%"></i><b>23.962 m</b></div>
+            <div class="bar-row"><span>R3LIVE</span><i style="--score:69.5%"></i><b>31.596 m</b></div>
+            <div class="bar-row"><span>4DRadarSLAM</span><i style="--score:100%"></i><b>45.453 m</b></div>
+            <div class="failure-row"><span>FIRE-LIVW</span><b>Failure</b><span>FAST-LIVO2</span><b>Failure</b></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section video-section" id="video">
+      <div class="shell">
+        <div class="section-heading split-heading reveal">
+          <div><p class="eyebrow">04 · Video</p><h2>From smoke entry<br><em>to tunnel endpoint.</em></h2></div>
+          <p>The one-minute IROS supplementary video shows the field platform, multimodal framework, adaptive switching, and side-by-side mapping behavior under real visual and geometric degradation.</p>
+        </div>
+        <div class="video-frame reveal">
+          <video controls playsinline preload="metadata" poster="figs/Fig5-建图效果.jpg">
+            <source src="IROS26_4178_VI_i.mp4" type="video/mp4">
+            Your browser does not support HTML5 video. <a href="IROS26_4178_VI_i.mp4">Download the MP4</a>.
+          </video>
+          <div class="video-meta"><span><i></i> IROS 2026 supplementary video</span><span>01:00 · 1080p · H.264</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section citation" id="citation">
+      <div class="shell citation-shell">
+        <div class="citation-copy reveal">
+          <p class="eyebrow">05 · Citation</p><h2>Build on<br><em>FIRE-LIVWO.</em></h2><p>If this work helps your research, please cite our IROS 2026 paper.</p>
+          <div class="citation-actions">
+            <a class="button button-primary" href="FIRE_LIVWO_Robust_LiDAR_Inertial_Visual_Wheel_Odometry_via_Failure_Immune_mmWave_Radar_Enhancement.pdf" target="_blank" rel="noopener">Read the paper <span aria-hidden="true">↗</span></a>
+            <a class="button button-secondary" href="https://github.com/KJ-Falloutlast/FIRE-LIVWO" target="_blank" rel="noopener">View materials <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="bibtex reveal">
+          <div class="code-topbar"><span>BibTeX</span><button type="button" data-copy-bib aria-label="Copy BibTeX">Copy</button></div>
+          <pre><code id="bibtex-code">@inproceedings{hu2026firelivwo,
+  author    = {Kun Hu and Menggang Li and Kaidi Wu and
+               Zhiwen Jin and Yingjie Zhao and Chaoquan Tang and
+               Eryi Hu and Gongbo Zhou},
+  title     = {{FIRE-LIVWO}: Robust {LiDAR}-Inertial-Visual-Wheel
+               Odometry via Failure-Immune mmWave Radar Enhancement},
+  booktitle = {2026 IEEE/RSJ International Conference on
+               Intelligent Robots and Systems (IROS)},
+  year      = {2026}
+}</code></pre>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-shell">
+      <a class="brand" href="#top"><img src="assets/icons/favicon.svg" alt="" width="32" height="32"><span>FIRE·LIVWO</span></a>
+      <p>Robust state estimation when visibility and geometry fail together.</p>
+      <div><a href="FIRE_LIVWO_Robust_LiDAR_Inertial_Visual_Wheel_Odometry_via_Failure_Immune_mmWave_Radar_Enhancement.pdf">Paper</a><a href="#video">Video</a><a href="https://github.com/KJ-Falloutlast/FIRE-LIVWO">GitHub</a></div>
+    </div>
+    <p class="template-credit">Website design inspired by the research-project pages of <a href="https://nerfies.github.io/" target="_blank" rel="noopener">Nerfies</a>, <a href="https://viral-humanoid.github.io/" target="_blank" rel="noopener">VIRAL</a>, <a href="https://www.zhengyiluo.com/PDC-Site/" target="_blank" rel="noopener">PDC</a>, and <a href="https://hover-versatile-humanoid.github.io/" target="_blank" rel="noopener">HOVER</a>.</p>
+  </footer>
+
+  <dialog class="lightbox" aria-label="Full-resolution figure viewer">
+    <button class="lightbox-close" type="button" aria-label="Close figure viewer">×</button>
+    <img src="" alt="">
+  </dialog>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

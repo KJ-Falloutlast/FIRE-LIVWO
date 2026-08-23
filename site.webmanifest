@@ -1,0 +1,10 @@
+{
+  "name": "FIRE-LIVWO | IROS 2026",
+  "short_name": "FIRE-LIVWO",
+  "description": "Failure-immune mmWave radar-enhanced multimodal odometry for extreme underground environments.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#080b10",
+  "theme_color": "#080b10",
+  "icons": [{"src": "assets/icons/favicon.svg", "sizes": "any", "type": "image/svg+xml"}]
+}

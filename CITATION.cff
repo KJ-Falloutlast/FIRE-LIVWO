@@ -1,0 +1,65 @@
+cff-version: 1.2.0
+message: "If you use FIRE-LIVWO in your research, please cite our IROS 2026 paper."
+type: conference-paper
+title: "FIRE-LIVWO: Robust LiDAR-Inertial-Visual-Wheel Odometry via Failure-Immune mmWave Radar Enhancement"
+authors:
+  - family-names: Hu
+    given-names: Kun
+  - family-names: Li
+    given-names: Menggang
+    orcid: "https://orcid.org/0000-0002-2395-9543"
+  - family-names: Wu
+    given-names: Kaidi
+    orcid: "https://orcid.org/0009-0005-3938-7454"
+  - family-names: Jin
+    given-names: Zhiwen
+    orcid: "https://orcid.org/0009-0008-6412-4711"
+  - family-names: Zhao
+    given-names: Yingjie
+  - family-names: Tang
+    given-names: Chaoquan
+    orcid: "https://orcid.org/0000-0003-1641-9845"
+  - family-names: Hu
+    given-names: Eryi
+    orcid: "https://orcid.org/0000-0002-3932-4542"
+  - family-names: Zhou
+    given-names: Gongbo
+    orcid: "https://orcid.org/0000-0002-8672-2535"
+conference:
+  name: 2026 IEEE/RSJ International Conference on Intelligent Robots and Systems
+  alias: IROS 2026
+year: 2026
+date-released: 2026-08-23
+url: "https://kj-falloutlast.github.io/FIRE-LIVWO/"
+repository: "https://github.com/KJ-Falloutlast/FIRE-LIVWO"
+keywords:
+  - LiDAR-inertial-visual odometry
+  - 4D mmWave radar
+  - wheel odometry
+  - sensor fusion
+  - degradation detection
+  - underground robotics
+preferred-citation:
+  type: conference-paper
+  title: "FIRE-LIVWO: Robust LiDAR-Inertial-Visual-Wheel Odometry via Failure-Immune mmWave Radar Enhancement"
+  authors:
+    - family-names: Hu
+      given-names: Kun
+    - family-names: Li
+      given-names: Menggang
+    - family-names: Wu
+      given-names: Kaidi
+    - family-names: Jin
+      given-names: Zhiwen
+    - family-names: Zhao
+      given-names: Yingjie
+    - family-names: Tang
+      given-names: Chaoquan
+    - family-names: Hu
+      given-names: Eryi
+    - family-names: Zhou
+      given-names: Gongbo
+  conference:
+    name: 2026 IEEE/RSJ International Conference on Intelligent Robots and Systems
+    alias: IROS 2026
+  year: 2026
